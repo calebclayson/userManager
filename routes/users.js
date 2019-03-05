@@ -56,7 +56,16 @@ router.post('/editted', (req, res) => {
 });
 
 router.get('/delete/:id', (req, res) => {
-  let currentUser = req.params;
+  let currentUser;
+  console.log(`Trying to delete ${req.params.id} from`);
+  console.log(userAry);
+  for(let i = 0; i < userAry.length; i++) {
+    if(userAry[i].id == req.params.id) {
+      userAry.splice(i, 1);
+    }
+  }
+  console.log(`Let's see if gone`);
+  console.log(userAry);
   res.render('delete');
 });
 
