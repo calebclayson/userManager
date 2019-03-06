@@ -10,6 +10,12 @@ router.get('/', function(req, res) {
 });
 
 router.post('/created', (req, res) => {
+  for(let i = 0; i < userAry.length; i++) {
+    if(req.body.id == userAry[i].id) {
+      req.body.id++;
+      i--;
+    }
+  }
   res.render('created', {
     email: req.body.email,
     name: req.body.name,
