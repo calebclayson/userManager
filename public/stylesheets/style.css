@@ -34,3 +34,19 @@ form {
 .hide {
   display: none;
 }
+
+input {
+  padding: .5em;
+  outline: none;
+  margin: .25em;
+}
+
+button {
+  background-color: #00B7FF;
+  border: 1px solid transparent;
+  width: 5em;
+  border-radius: 2px;
+  margin: .5em auto;
+  color: white;
+  outline: none;
+}

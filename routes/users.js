@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/created', (req, res) => {
+  (!req.body.id) ? req.body.id = 1: req.body.id = req.body.id;
   for(let i = 0; i < userAry.length; i++) {
     if(req.body.id == userAry[i].id) {
       req.body.id++;
